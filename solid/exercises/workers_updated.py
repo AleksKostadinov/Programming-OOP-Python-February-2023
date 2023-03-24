@@ -62,7 +62,7 @@ class WorkManager(BaseManager):
         self.worker.work()
 
 
-class LunchManager(BaseManager):
+class BreakManager(BaseManager):
 
     def set_worker(self, worker):
         assert isinstance(worker, Eatable), f"`worker` must be of type {Eatable}"
@@ -74,21 +74,19 @@ class LunchManager(BaseManager):
 
 
 work_manager = WorkManager()
-break_manager = LunchManager()
-
-worker = Worker()
-work_manager.set_worker(worker)
-break_manager.set_worker(worker)
+break_manager = BreakManager()
+work_manager.set_worker(Worker())
+break_manager.set_worker(Worker())
 work_manager.manage()
 break_manager.lunch_break()
-
-super_worker = SuperWorker()
-work_manager.set_worker(super_worker)
-break_manager.set_worker(super_worker)
+work_manager.set_worker(SuperWorker())
+break_manager.set_worker(SuperWorker())
 work_manager.manage()
 break_manager.lunch_break()
-
-robot = Robot()
-work_manager.set_worker(robot)
+work_manager.set_worker(Robot())
 work_manager.manage()
-break_manager.set_worker(robot)
+try:
+    break_manager.set_worker(Robot())
+    break_manager.lunch_break()
+except:
+    pass

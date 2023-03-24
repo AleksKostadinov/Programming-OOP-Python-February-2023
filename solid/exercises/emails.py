@@ -12,12 +12,12 @@ class IContent(ABC):
 
 class MyContent(IContent):
     def format(self):
-        return "\n".join(['<myML>', self.content, '</myML>'])
+        return "".join(['<MyML>', self.content, '</MyML>'])
 
 
 class HTMLContent(IContent):
     def format(self):
-        return "\n".join(['<html>', self.content, '</html>'])
+        return "".join(['<html>', self.content, '</html>'])
 
 
 class IEmail(ABC):

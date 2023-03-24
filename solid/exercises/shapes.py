@@ -25,6 +25,16 @@ class Square(Shape):
         return self.side * self.side
 
 
+class Triangle(Shape):
+
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+
+    def calculate_area(self):
+        return self.base * self.height / 2
+
+
 class AreaCalculator:
 
     def __init__(self, shapes):
@@ -40,6 +50,6 @@ class AreaCalculator:
         return total
 
 
-shapes = [Rectangle(2, 3), Rectangle(1, 6)]
+shapes = [Rectangle(1, 6), Triangle(2, 3)]
 calculator = AreaCalculator(shapes)
 print("The total area is: ", calculator.total_area)
