@@ -1,4 +1,4 @@
-# test animal
+# tests animal
 import unittest
 
 from project.animal import Animal

@@ -1,4 +1,4 @@
-# zero test
+# zero tests
 from project.product import Product
 from project.beverage.beverage import Beverage
 from project.food.soup import Soup

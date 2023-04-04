@@ -1,4 +1,7 @@
-class Magic:
+from abc import ABC, abstractmethod
+
+
+class Magic(ABC):
     def __init__(self, name, bullets_count):
         self.name = name
         self.bullets_count = bullets_count
@@ -22,4 +25,10 @@ class Magic:
         if value < 0:
             raise ValueError('Bullets cannot be below 0.')
         self.__bullets_count = value
-        
+
+    @abstractmethod
+    def fire(self):
+        ...
+
+    def __str__(self):
+        return f"{self.magic_type} Magic: {self.name} ({self.bullets_count} bullets)"

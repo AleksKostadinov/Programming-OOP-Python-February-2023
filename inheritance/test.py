@@ -1,4 +1,4 @@
-# test zero
+# tests zero
 import unittest
 
 from inheritance.stack_of_strings import Stack

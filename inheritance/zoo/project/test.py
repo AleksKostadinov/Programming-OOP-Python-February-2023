@@ -1,4 +1,4 @@
-# zero test
+# zero tests
 from project.animal import Animal
 from project.mammal import Mammal
 from project.lizard import Lizard
