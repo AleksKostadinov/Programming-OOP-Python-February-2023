@@ -40,6 +40,3 @@ class Everland:
                 result.append(
                     f"--- Appliances monthly cost: {sum([a.get_monthly_expense() for a in room.appliances]):.2f}$")
         return '\n'.join(result)
-
-
-

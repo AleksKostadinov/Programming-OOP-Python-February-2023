@@ -114,8 +114,6 @@ class HorseRaceApp:
         if len(race.jockeys) < 2:
             raise Exception(f'Horse race {race_type} needs at least two participants!')
 
-        result = []
-
         fastest_jockey = sorted(race.jockeys, key=lambda x: -x.horse.speed)[:1]
 
         return f"The winner of the {race_type} race, " \

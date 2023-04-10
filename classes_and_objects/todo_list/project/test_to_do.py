@@ -80,13 +80,13 @@ class Test(unittest.TestCase):
         task = Task("Tst", "27.04.2020")
         section.add_task(task)
         message = section.complete_task("Tst")
-        expected = "Completed task Tst"
+        expected = "Completed project_exercise Tst"
         self.assertEqual(message, expected)
 
     def test_complete_not_found(self):
         section = Section("New section")
         message = section.complete_task("Tst")
-        expected = "Could not find task with the name Tst"
+        expected = "Could not find project_exercise with the name Tst"
         self.assertEqual(message, expected)
 
     def test_clean_section(self):

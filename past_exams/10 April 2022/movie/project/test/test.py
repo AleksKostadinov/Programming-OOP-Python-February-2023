@@ -14,7 +14,7 @@ class TestMovie(TestCase):
 
     def test_name_cannot_be_empty(self):
         with self.assertRaises(ValueError) as ve:
-            result = Movie('', 1994, 9.2)
+            self.movie = Movie('', 1994, 9.2)
         self.assertEqual('Name cannot be an empty string!', str(ve.exception))
 
     def test_year_if_before_1887(self):

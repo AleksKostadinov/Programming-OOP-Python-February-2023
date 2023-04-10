@@ -109,7 +109,6 @@ class ConcertTrackerApp:
                         not in band_member.skills:
                     raise Exception(f"The {band_name} band is not ready to play at the concert!")
 
-
         elif concert.genre == 'Metal':
             for band_member in band.members:
                 if band_member.__class__.__name__ == 'Drummer' and 'play the drums with drumsticks' \

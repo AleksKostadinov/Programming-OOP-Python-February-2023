@@ -39,7 +39,6 @@ class TestTeam(TestCase):
 
         other = Team('Strawberry')
         other.add_member(Tsvety=36)
-        result = self.team > other
         self.assertEqual(True, self.team.__gt__(other))
         self.assertEqual(False, other.__gt__(self.team))
 

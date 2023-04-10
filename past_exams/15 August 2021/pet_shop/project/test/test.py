@@ -44,7 +44,7 @@ class TestPetShop(TestCase):
         self.pet_shop.add_pet('Pet1')
 
         with self.assertRaises(Exception) as ex:
-            result = self.pet_shop.feed_pet('Food1', 'Pet2')
+            self.pet_shop.feed_pet('Food1', 'Pet2')
         self.assertEqual('Please insert a valid pet name', str(ex.exception))
 
     def test_add_feed_pet_dont_have_this_food(self):

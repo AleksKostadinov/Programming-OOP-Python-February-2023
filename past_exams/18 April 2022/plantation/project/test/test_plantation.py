@@ -13,7 +13,7 @@ class TestPlantation(TestCase):
 
     def test_size_negative(self):
         with self.assertRaises(ValueError) as ve:
-            result = Plantation(-1)
+            self.plantation = Plantation(-1)
         self.assertEqual("Size must be positive number!", str(ve.exception))
 
     def test_hire_worker_valid(self):

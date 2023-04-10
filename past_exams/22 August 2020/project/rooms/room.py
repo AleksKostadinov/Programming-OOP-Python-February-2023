@@ -22,6 +22,3 @@ class Room:
             for item in items:
                 total_expenses += item.get_monthly_expense()
         self.__expenses = total_expenses
-
-    # def __repr__(self):
-    #
